@@ -73,5 +73,5 @@ async function register(FirstName,LastName, DOB, Password,email){
 
 const search = async q => await mysql.query(`SELECT id, FirstName, LastName, FROM Users WHERE LastName LIKE ? OR FirstName LIKE ?; `, [`%${q}%`, `%${q}%`]);
 
-module.exports = {rand, getAll,get,add,getTypes,search,update,remove,Types,register,login}
+module.exports = {getAll,get,add,getTypes,search,update,remove,Types,register,login}
 
