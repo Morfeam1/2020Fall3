@@ -19,7 +19,18 @@
        <router-link to="/about" class="navbar-item">About</router-link>
        <router-link to="/feed" class="navbar-item">Feed</router-link>
 
+  <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Admin
+        </a>
 
+        <div class="navbar-dropdown">
+          <router-link to="/Users" class="navbar-item">
+            Users
+          </router-link>
+        </div>
+      </div>
+    </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -42,7 +53,7 @@
           </a>
         </div>
       </div>
-    </div>
+    
 
     <div class="navbar-end">
       <div class="navbar-item">

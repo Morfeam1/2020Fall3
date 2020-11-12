@@ -74,6 +74,8 @@ router
         }).catch(next)
     })
 module.exports = router;
+
+
 //mysql 2 table creation code
 /* 
 CREATE TABLE IF NOT EXISTS `Users` (
