@@ -1,8 +1,8 @@
 <template>
-  <div class = 'page'>
-      <h2 class = 'title is-2'>Users Page</h2>
+  <div class="page">
+      <h2 class="title is-2">Users Page</h2>
 
-        <table class="table">
+        <table class="table is-narrow is-hoverable is-fullwidth">
             <thead><tr>
                 <th>id</th>
                 <th>First Name</th>
@@ -11,37 +11,44 @@
                 <th>DOB</th>
                 <th>Type</th>
             </tr></thead>
-            <tbody><tr v-for="(x, i) in list" 
-                :key="i" 
-                :post="x">
-                  <th>{{id}}</th>
-                <th>{{x.FirstName}}</th>
-                <th>{{x.LastName}}</th>
-                <th>{{x.Password}}</th>
-                <th>{{x.DOB}}</th>
-                <th>{{x.Type}}</th>              
-            </tr></tbody>
+            <tbody>
+                <tr v-for=" (x, i) in list " 
+                      :key="i"
+                      :i="i"
+                      :post="x">
+                    <th>{{x.id}}</th>
+                    <td>{{x.FirstName}}</td>
+                    <td>{{x.LastName}}</td>
+                    <td>{{x.Password}}</td>
+                    <td>{{x.DOB}}</td>
+                    <td>{{x.Type}}</td>
+                </tr>
+            </tbody>
         </table>
-        
-    </div>
+
+  </div>
 </template>
 
 <script>
-
-import { posts } from "@/models/users";
-
+import { getList } from "@/models/users";
+import session from "@/models/session";
 export default {
     data(){
-        return{
-            posts
+        return {
+            list: []
         }
     },
+    async created(){
+        this.list = await getList(); 
+    },
     components: {
-       
+        
+    },
+    methods: {
+        
     }
 }
 </script>
 
 <style>
-    
 </style>

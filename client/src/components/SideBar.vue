@@ -1,5 +1,5 @@
 <template>
-  <nav class="panel">
+<nav class="panel">
   <p class="panel-heading">
     Side Bar
   </p>
@@ -68,10 +68,8 @@
 
 <script>
 export default {
-
 }
 </script>
 
 <style>
-
 </style>
