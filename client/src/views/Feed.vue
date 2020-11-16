@@ -18,13 +18,17 @@
 <script>
 import Post from "@/components/Post";
 import SideBar from "@/components/SideBar";
-import { posts } from "@/models/feed";
+import { getposts } from "@/models/feed";
+import session from "@/models/session";
 
 export default {
     data(){
         return{
-            posts
+            posts: []
         }
+    },
+    async created(){
+        this.posts = getposts();
     },
     components: {
         Post, SideBar
