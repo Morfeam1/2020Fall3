@@ -14,14 +14,12 @@
                             Add a picture
                         </p>
                     </header>
-                    
-                    <div class="card-content">
+                    <p class="card-content">
 
                         <figure v-for="p in fbPics" :key="p.id" class="image is-64x64" @click.prevent="add(p)">
                             <img :src="p.picture" alt="" />
                         </figure>
-                    </div>
-                    
+                    </p>
                 </div>
 
                 <Post v-for=" (x, i) in posts " 
@@ -37,7 +35,7 @@
 </template>
 
 <script>
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/SideBar";
 import Post from "@/components/Post";
 import { getPosts } from "@/models/feed";
 import session from "@/models/session";

@@ -89,9 +89,10 @@ export default {
 }
 ///////////////////////////////////
 //  Load facebook scripts
+ 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '864177661004843',
+      appId      : '3661028330624806',
       cookie     : true,
       xfbml      : true,
       version    : 'v9.0'
@@ -100,6 +101,7 @@ export default {
     FB.AppEvents.logPageView();   
       
   };
+
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -107,6 +109,7 @@ export default {
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
 //////////////////////////////////
 //  Load Google Scripts
         const googleScriptTag = document.createElement('script')
@@ -116,7 +119,7 @@ export default {
             // the global gapi variable is created by loading that script
             gapi.load('auth2', () => {
                 auth2 = gapi.auth2.init({
-                    client_id: "69162742167-oo4oe777cjfues67332npkpss244ktga.apps.googleusercontent.com",
+                    client_id: "18931884257-6p6mk5bvgdc2h6j7dc1j8mmnai6kkip5.apps.googleusercontent.com",
                     cookiepolicy: 'single_host_origin',
                     scope: 'profile email'
                 })
